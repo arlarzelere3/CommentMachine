@@ -12,7 +12,7 @@
 <div class="small-6 columns">
 	{{#each comment in this.comments}}
 		{{ comment.id }}
-		<h5>Author: {{ comment.author }}</h5>
+		<h5>Author: {{ comment.author.name }}</h5>
 		<p>Text: {{ comment.text }}</p>
 	{{/each}}
 </div>

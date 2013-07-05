@@ -3,6 +3,10 @@ App.Store = DS.Store.extend({
 	adapter: 'DS.FixtureAdapter'
 });
 
+App.User = DS.Model.extend({
+	name: DS.attr('string')
+})
+
 App.Record = DS.Model.extend({
 	title: DS.attr('string'),
 	value: DS.attr('number'),
@@ -12,8 +16,15 @@ App.Record = DS.Model.extend({
 App.Comment = DS.Model.extend({
 	record: DS.belongsTo('App.Record'),
 	text: DS.attr('string'),
-	author: DS.attr('string')
+	author: DS.belongsTo('App.User')
 });
+
+App.User.FIXTURES = [
+	{
+		id: 001,
+		name: 'Alex'
+	}
+]
 
 App.Record.FIXTURES = [
 	{
@@ -48,13 +59,13 @@ App.Comment.FIXTURES = [
 	{
 		id: 101,
 		text: 'This is the only comment',
-		author: 'Alex',
+		author: 001,
 		record: 1
 	},
 	{
 		id:102,
 		text: 'Lol jk another comment',
-		author: 'Alex',
+		author: 001,
 		record: 1
 	}
 ];
