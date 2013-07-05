@@ -1,0 +1,5 @@
+<ul>
+	{{#each controller}}
+		<li>{{#linkTo "record" this }}{{ this.title }}{{/linkTo}}</li>
+	{{/each}}
+</ul>
