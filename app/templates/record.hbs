@@ -2,10 +2,22 @@
 <div class="small-6 columns">
 	<table>
 		<tr>
+			<td>Title</td>
 			<td>{{ title }}</td>
 		</tr>
 		<tr>
+			<td>Value</td>
 			<td>{{ value }}</td>
+		</tr>
+		<tr>
+			<td>Comments</td>
+			<td>
+				{{#if this.comments}}
+					{{this.comments.length}}
+				{{else}}
+					None
+				{{/if}}
+			</td>
 		</tr>
 	</table>
 </div>

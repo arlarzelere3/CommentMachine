@@ -3,6 +3,7 @@ App.Store = DS.Store.extend({
 	adapter: 'DS.FixtureAdapter'
 });
 
+//Models
 App.User = DS.Model.extend({
 	name: DS.attr('string')
 })
@@ -19,6 +20,7 @@ App.Comment = DS.Model.extend({
 	author: DS.belongsTo('App.User')
 });
 
+//Fixtures
 App.User.FIXTURES = [
 	{
 		id: 001,
