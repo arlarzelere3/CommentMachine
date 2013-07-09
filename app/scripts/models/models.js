@@ -11,7 +11,12 @@ App.User = DS.Model.extend({
 App.Record = DS.Model.extend({
 	title: DS.attr('string'),
 	value: DS.attr('number'),
-	comments: DS.hasMany('App.Comment')
+	comments: DS.hasMany('App.Comment'),
+	isCommented: function() {
+		var numComments = this.get('comments').get('length');
+		console.debug(numComments);
+		return numComments > 0;
+	}.property('comments')
 });
 
 App.Comment = DS.Model.extend({
