@@ -1,5 +1,5 @@
 <ul>
 	{{#each controller}}
-		<li>{{#linkTo "record" this }}{{ this.title }}{{/linkTo}}</li>
+		<li {{bindAttr class="isCommented:commented"}}>{{#linkTo "record" this }}{{ this.title }}{{/linkTo}}</li>
 	{{/each}}
 </ul>

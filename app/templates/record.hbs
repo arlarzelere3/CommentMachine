@@ -9,16 +9,6 @@
 			<td>Value</td>
 			<td>{{ value }}</td>
 		</tr>
-		<tr>
-			<td>Comments</td>
-			<td>
-				{{#if this.isCommented }}
-					Yes
-				{{else}}
-					No
-				{{/if}}
-			</td>
-		</tr>
 	</table>
 </div>
 <div class="small-6 columns">
@@ -26,5 +16,7 @@
 		{{ comment.id }}
 		<h5>Author: {{ comment.author.name }}</h5>
 		<p>Text: {{ comment.text }}</p>
+	{{ else }}
+		<h5>No Comments </h5>
 	{{/each}}
 </div>
