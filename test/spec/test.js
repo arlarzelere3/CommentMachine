@@ -1,10 +1,9 @@
 //Setup testing
-mocha.setup('BDD');
 chai.should;
 
 
 /*global describe, it */
-'use strict';
+/*'use strict';
 (function () {
     describe('Give it some context', function () {
         describe('maybe a bit more context here', function () {
@@ -14,7 +13,7 @@ chai.should;
         });
     });
 })();
-
+*/
 //Create Fixture for testing
 App.Store = DS.Store.extend({
 	revision: 13,

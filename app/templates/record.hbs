@@ -14,7 +14,7 @@
 <div class="small-6 columns">
 	{{#each comment in this.comments}}
 		{{ comment.id }}
-		<h5>Author: {{ comment.author.name }}</h5>
+		<h5>Author: {{#linkTo "user" this}}{{ comment.author.name }}{{/linkTo}}</h5>
 		<p>Text: {{ comment.text }}</p>
 	{{ else }}
 		<h5>No Comments </h5>

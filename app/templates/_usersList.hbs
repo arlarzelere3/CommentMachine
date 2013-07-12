@@ -1,0 +1,5 @@
+<ul>
+	{{#each controller}}
+		<li>{{#linkTo "user" this }}{{ this.name }}{{/linkTo}}</li>
+	{{/each}}
+</ul>

@@ -14,7 +14,6 @@ App.Record = DS.Model.extend({
 	comments: DS.hasMany('App.Comment'),
 	isCommented: function() {
 		var numComments = this.get('comments').get('length');
-		console.debug(numComments);
 		return numComments > 0;
 	}.property('comments')
 });
@@ -38,7 +37,7 @@ App.Record.FIXTURES = [
 		id: 1,
 		title: 'First',
 		value: 100,
-		comments: [101, 102]
+		comments: [101]
 	},
 	{
 		id: 2,
@@ -48,7 +47,8 @@ App.Record.FIXTURES = [
 	{
 		id: 3,
 		title: 'Third Thing',
-		value: 300
+		value: 300,
+		comments: [102]
 	},
 	{
 		id: 4,
@@ -73,6 +73,6 @@ App.Comment.FIXTURES = [
 		id:102,
 		text: 'Lol jk another comment',
 		author: 001,
-		record: 1
+		record: 3
 	}
 ];

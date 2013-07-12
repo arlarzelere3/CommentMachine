@@ -4,5 +4,8 @@ html, body {
 }
 
 .commented {
+	color: black;
+}
+ul li {
 	color: red;
 }
