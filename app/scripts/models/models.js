@@ -21,7 +21,7 @@ App.Record = DS.Model.extend({
 App.Comment = DS.Model.extend({
 	record: DS.belongsTo('App.Record'),
 	text: DS.attr('string'),
-	author: DS.belongsTo('App.User')
+	user: DS.belongsTo('App.User')
 });
 
 //Fixtures
@@ -66,13 +66,13 @@ App.Comment.FIXTURES = [
 	{
 		id: 101,
 		text: 'This is the only comment',
-		author: 001,
+		user: 001,
 		record: 1
 	},
 	{
 		id:102,
-		text: 'Lol jk another comment',
-		author: 001,
+		text: 'Lol another comment',
+		user: 001,
 		record: 3
 	}
 ];

@@ -13,9 +13,14 @@
 </div>
 <div class="small-6 columns">
 	{{#each comment in this.comments}}
-		{{ comment.id }}
-		<h5>Author: {{#linkTo "user" this}}{{ comment.author.name }}{{/linkTo}}</h5>
-		<p>Text: {{ comment.text }}</p>
+		<h5>Author: {{#linkTo "user" this}}{{ comment.user.name }}{{/linkTo}}</h5>
+		<p {{bindAttr class="isEditing:editing"}}>
+			{{#if isEditing}}
+				<input class='edit'>
+			{{else}}
+			Text: <span {{action "editComment" on="doubleClick"}}>{{ comment.text }}</span>
+			{{/if}}
+		</p>
 	{{ else }}
 		<h5>No Comments </h5>
 	{{/each}}
