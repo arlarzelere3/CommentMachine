@@ -3,11 +3,12 @@ html, body {
     margin: 20px;
 }
 
+a {
+	color: red;
+}
+
 .commented a {
 	color: black;
-}
-ul li {
-	color: red;
 }
 
 .editing {

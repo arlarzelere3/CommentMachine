@@ -29,6 +29,10 @@ App.User.FIXTURES = [
 	{
 		id: 001,
 		name: 'Alex'
+	},
+	{
+		id: 002,
+		name: 'Not Alex'
 	}
 ]
 

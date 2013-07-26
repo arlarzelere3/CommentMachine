@@ -8,6 +8,6 @@ App.RecordController = Ember.ObjectController.extend({
 			text: content
 		});
 
-		this.set('newComment', '')
+		this.set('newComment', '');
 	}
 });
