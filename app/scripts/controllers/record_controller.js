@@ -7,5 +7,7 @@ App.RecordController = Ember.ObjectController.extend({
 		comments.createRecord({
 			text: content
 		});
+
+		this.set('newComment', '')
 	}
 });

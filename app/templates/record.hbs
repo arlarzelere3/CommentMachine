@@ -18,8 +18,7 @@
 			Text: <span>{{ comment.text }}</span>
 		</p>
 	{{ else }}
-		{{controller}}
 		<h5>No Comments </h5>
-		{{view Ember.TextField id="new-comment" placeholder="Please enter a new comment" valueBinding="newComment" action="createComment"}}
 	{{/each}}
+	{{view Ember.TextField id="new-comment" placeholder="Please enter a new comment" valueBinding="newComment" action="createComment"}}
 </div>
