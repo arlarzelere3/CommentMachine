@@ -9,7 +9,10 @@ Displays a list of records, as well as a list of comments on each record
 
 TODO:
   - Make editing comments possible
-    - C_UD - R is already complete
+    - Create - completed
+    - Read - completed
+    - Update - wip
+    - Destroy - wip
   - Create user dashboard '/:user_id'
     - Show all records associated with comments by current user
     - Associate records to users
