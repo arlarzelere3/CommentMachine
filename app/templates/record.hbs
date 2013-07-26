@@ -13,15 +13,13 @@
 </div>
 <div class="small-6 columns">
 	{{#each comment in this.comments}}
-		<h5>Author: {{#linkTo "user" this}}{{ comment.user.name }}{{/linkTo}}</h5>
-		<p {{bindAttr class="isEditing:editing"}}>
-			{{#if isEditing}}
-				<input class='edit'>
-			{{else}}
-			Text: <span {{action "editComment" on="doubleClick"}}>{{ comment.text }}</span>
-			{{/if}}
+		<!--<h5>Author: {{#linkTo "user" this}}{{ comment.user.name }}{{/linkTo}}</h5>-->
+		<p>
+			Text: <span>{{ comment.text }}</span>
 		</p>
 	{{ else }}
+		{{controller}}
 		<h5>No Comments </h5>
+		{{view Ember.TextField id="new-comment" placeholder="Please enter a new comment" valueBinding="newComment" action="createComment"}}
 	{{/each}}
 </div>

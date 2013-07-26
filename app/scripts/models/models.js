@@ -15,13 +15,13 @@ App.Record = DS.Model.extend({
 	isCommented: function() {
 		var numComments = this.get('comments').get('length');
 		return numComments > 0;
-	}.property('comments')
+	}.property('comments.@each')
 });
 
 App.Comment = DS.Model.extend({
 	record: DS.belongsTo('App.Record'),
-	text: DS.attr('string'),
-	user: DS.belongsTo('App.User')
+	text: DS.attr('string')
+	//,user: DS.belongsTo('App.User')
 });
 
 //Fixtures
@@ -47,7 +47,7 @@ App.Record.FIXTURES = [
 	{
 		id: 3,
 		title: 'Third Thing',
-		value: 300,
+		value: 30,
 		comments: [102]
 	},
 	{
@@ -66,13 +66,13 @@ App.Comment.FIXTURES = [
 	{
 		id: 101,
 		text: 'This is the only comment',
-		user: 001,
+		//user: 001,
 		record: 1
 	},
 	{
 		id:102,
 		text: 'Lol another comment',
-		user: 001,
+		//user: 001,
 		record: 3
 	}
 ];

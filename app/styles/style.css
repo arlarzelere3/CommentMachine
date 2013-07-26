@@ -9,3 +9,7 @@ html, body {
 ul li {
 	color: red;
 }
+
+.editing {
+	color: green;
+}
